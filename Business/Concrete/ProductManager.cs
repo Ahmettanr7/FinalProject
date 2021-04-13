@@ -19,6 +19,7 @@ namespace Business.Concrete
         public List<Product> GetAll()
         {
             // iş kodları
+            
             return _productDal.GetAll();
             
         }
