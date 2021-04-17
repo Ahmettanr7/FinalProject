@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet ("getall")]   
-        public IActionResult Get()
+        public IActionResult Getall()
             {
             
             var result = _productService.GetAll();
@@ -35,8 +35,20 @@ namespace WebAPI.Controllers
             return BadRequest(result);
             }
 
+        [HttpGet("getproductdetails")]
+        public IActionResult GetProductDetails()
+        {
+
+            var result = _productService.GetProductDetails();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
         [HttpGet("getbyid")]
-        public IActionResult Get(int id)
+        public IActionResult GetById(int id)
         {
             var result = _productService.GetById(id);
             if (result.Success)
