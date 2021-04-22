@@ -1,12 +1,11 @@
-﻿using Core.Utilities.Helpers;
-using Core.Utilities.Results;
+﻿using Core.Utilities.Results;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.IO;
 
 namespace Core.Utilities.FileManager
 {
-    public class FileHelper : IFileHelper
+    public class FileHelper
     {
         static string _directory = Directory.GetCurrentDirectory() + @"\wwwroot\";
         static string _path = @"Images\";
